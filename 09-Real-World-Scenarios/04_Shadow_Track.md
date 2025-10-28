@@ -26,7 +26,7 @@ Since its running SMB lets try to make a crackmapexec to get the name of the com
 crackmapexec smb 172.20.31.12
 ```
 
-![](Assets/Pasted%20image%2020251028153926.png)
+![](../Assets/Pasted%20image%2020251028153926.png)
 
 
 Answer:DESKTOP-BG4O059
