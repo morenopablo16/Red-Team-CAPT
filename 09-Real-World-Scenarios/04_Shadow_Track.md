@@ -12,7 +12,7 @@ To begin, we need to enumerate the ports and services running on Harry's compute
  nmap -p- --open -n --max-retries 5000 -sS -vvv -Pn 172.20.31.12 -oG allPorts
 ```
 
-![](Assets/Pasted%20image%2020251028154318.png)
+![](../Assets/Pasted%20image%2020251028154318.png)
 
 
 Then lets perform a more in depth scan on the open ports
