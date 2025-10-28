@@ -101,7 +101,7 @@
 - **Social Engineering with Phishing**: Phishing campaigns, pretexting, human vulnerability exploitation
 
 ### Module 9: Real-World Scenarios ✅ COMPLETED
-- **Practical Labs** (4 labs): Void, Revalry, Data Heist, Salute Track ✅
+- **Practical Labs** (4 labs): Void, Revalry, Data Heist, Shadow Track ✅
 - **Complete Attack Chains**: Reconnaissance → Exploitation → Privilege Escalation → Post-Exploitation
 
 ---
